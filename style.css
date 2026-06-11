@@ -1,0 +1,301 @@
+
+
+    /* ===================================
+   CONFIGURAÇÕES GERAIS
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7f2;
+    color:#333;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:bold;
+    color:#2e7d32;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#2e7d32;
+}
+
+.menu-btn{
+    display:none;
+    border:none;
+    background:none;
+    font-size:1.8rem;
+    cursor:pointer;
+}
+
+/* ===================================
+   HERO
+=================================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    color:white;
+    max-width:700px;
+    padding:20px;
+
+    animation:fadeUp 1.2s ease;
+}
+
+.hero h1{
+    font-size:3.2rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#4caf50;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#2e7d32;
+    transform:translateY(-3px);
+}
+
+/* ===================================
+   SEÇÕES
+=================================== */
+
+.section{
+    padding:100px 8%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#2e7d32;
+}
+
+/* ===================================
+   CARDS
+=================================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#2e7d32;
+}
+
+/* ===================================
+   SUSTENTABILIDADE
+=================================== */
+
+.green-section{
+    background:#e8f5e9;
+}
+
+.info-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.info-box{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    font-size:2rem;
+    transition:.4s;
+}
+
+.info-box:hover{
+    transform:scale(1.05);
+}
+
+.info-box h3{
+    font-size:1.2rem;
+    margin:15px 0;
+}
+
+/* ===================================
+   CONTADORES
+=================================== */
+
+.contador-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.contador-box{
+    background:white;
+    padding:30px;
+    width:200px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contador{
+    font-size:3rem;
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+/* ===================================
+   TURMA
+=================================== */
+
+.turma{
+    text-align:center;
+}
+
+.turma p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ===================================
+   ANIMAÇÃO
+=================================== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVO
+=================================== */
+
+@media(max-width:768px){
+
+    .menu{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        align-items:center;
+        padding:20px;
+        display:none;
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:2.3rem;
+    }
+}
+
+    
+        
+
+   
